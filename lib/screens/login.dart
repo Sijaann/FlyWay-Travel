@@ -154,14 +154,14 @@ class _LoginState extends State<Login> {
               //Signup TEXTBUTTON
               GestureDetector(
                 onTap: () {
-                  final snackBar = SnackBar(
-                    backgroundColor: AppColors.primaryColor,
-                    content: const Text('Working'),
-                  );
+                  // final snackBar = SnackBar(
+                  //   backgroundColor: AppColors.primaryColor,
+                  //   content: const Text('Working'),
+                  // );
 
-                  // Find the ScaffoldMessenger in the widget tree
-                  // and use it to show a SnackBar.
-                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  // // Find the ScaffoldMessenger in the widget tree
+                  // // and use it to show a SnackBar.
+                  // ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 },
                 child: Text(
                   "Signup",
