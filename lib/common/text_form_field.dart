@@ -6,12 +6,15 @@ class CustomTextField extends StatelessWidget {
   //Textfield properties
   final String hintText;
   final bool val;
-  final Icon leadingIcon;
+  final Icon? leadingIcon;
+  final double radius;
+
   const CustomTextField(
       {super.key,
       required this.hintText,
       required this.val,
-      required this.leadingIcon});
+      this.leadingIcon,
+      required this.radius});
 
   @override
   Widget build(BuildContext context) {
@@ -32,17 +35,17 @@ class CustomTextField extends StatelessWidget {
               color: AppColors.primaryColor,
               width: 2.0,
             ),
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(radius),
           ),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(radius),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
               color: AppColors.primaryColor,
               width: 2.0,
             ),
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(radius),
           ),
           prefixIcon: leadingIcon,
         ),

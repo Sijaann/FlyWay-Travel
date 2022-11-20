@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tick_tick_travel/screens/login.dart';
+import 'package:tick_tick_travel/screens/signup.dart';
+import 'package:tick_tick_travel/screens/splash.dart';
 import 'package:tick_tick_travel/utils/colors.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 void main() {
   runApp(Tick_Tick_Travel());
@@ -24,7 +27,11 @@ class Tick_Tick_Travel extends StatelessWidget {
           colorScheme: ColorScheme.light(
             primary: AppColors.primaryColor,
           )),
-      home: Login(),
+      routes: {
+        "/login": (context) => Login(),
+        "/signup": (context) => Signup(),
+      },
+      home: SplashScreen(),
     );
   }
 }

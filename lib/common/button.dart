@@ -8,12 +8,14 @@ class CustomButton extends StatelessWidget {
   final VoidCallback onTap;
   final double hSize;
   final double vSize;
+  final double radius;
   CustomButton(
       {super.key,
       required this.btnText,
       required this.onTap,
       required this.hSize,
-      required this.vSize});
+      required this.vSize,
+      required this.radius});
 
   @override
   Widget build(BuildContext context) {
@@ -21,14 +23,18 @@ class CustomButton extends StatelessWidget {
       width: hSize,
       height: vSize,
       child: ElevatedButton(
-          onPressed: onTap,
-          child: Text(
-            btnText,
-            style: GoogleFonts.redRose(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          )),
+        style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(radius))),
+        onPressed: onTap,
+        child: Text(
+          btnText,
+          style: GoogleFonts.redRose(
+            fontSize: 20,
+            color: Colors.white,
+          ),
+        ),
+      ),
     );
   }
 }

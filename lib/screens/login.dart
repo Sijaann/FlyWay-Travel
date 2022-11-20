@@ -6,6 +6,7 @@ import 'package:tick_tick_travel/utils/app_large_text.dart';
 import 'package:tick_tick_travel/utils/app_text.dart';
 import 'package:tick_tick_travel/utils/colors.dart';
 import 'package:tick_tick_travel/utils/heading_text.dart';
+import 'package:tick_tick_travel/utils/small_text.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -66,10 +67,11 @@ class _LoginState extends State<Login> {
             hintText: 'Email',
             leadingIcon: Icon(
               Icons.person_outline,
-              color: Colors.black,
+              color: AppColors.hintTextColor,
               size: 26,
             ),
             val: false,
+            radius: 50.0,
           ),
           SizedBox(height: 30),
 
@@ -78,10 +80,11 @@ class _LoginState extends State<Login> {
             hintText: 'Password',
             leadingIcon: Icon(
               Icons.lock_outline,
-              color: Colors.black,
+              color: AppColors.hintTextColor,
               size: 26,
             ),
             val: true,
+            radius: 50.0,
           ),
 
           //ForgotPassword? TEXTBUTTON
@@ -121,6 +124,7 @@ class _LoginState extends State<Login> {
               onTap: () {},
               hSize: 350,
               vSize: 44,
+              radius: 50.0,
             ),
           ),
 
@@ -132,6 +136,7 @@ class _LoginState extends State<Login> {
               onTap: () {},
               hSize: 350,
               vSize: 44,
+              radius: 50.0,
             ),
           ),
 
@@ -143,34 +148,16 @@ class _LoginState extends State<Login> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                "Don't have an account?",
-                style: GoogleFonts.redRose(
-                  color: AppColors.textColor,
-                  fontSize: 15.0,
-                ),
-              ),
+              SmallText(
+                  text: "Don't have and account?",
+                  textColor: AppColors.textColor),
 
               //Signup TEXTBUTTON
               GestureDetector(
-                onTap: () {
-                  // final snackBar = SnackBar(
-                  //   backgroundColor: AppColors.primaryColor,
-                  //   content: const Text('Working'),
-                  // );
-
-                  // // Find the ScaffoldMessenger in the widget tree
-                  // // and use it to show a SnackBar.
-                  // ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                },
-                child: Text(
-                  "Signup",
-                  style: GoogleFonts.redRose(
-                    color: AppColors.primaryColor,
-                    fontSize: 15,
-                  ),
-                ),
-              )
+                onTap: () => Navigator.pushReplacementNamed(context, "/signup"),
+                child: SmallText(
+                    text: "Signup", textColor: AppColors.primaryColor),
+              ),
             ],
           )
         ],
