@@ -19,7 +19,7 @@ class _IntroPage1State extends State<IntroPage1> {
         children: [
           Image(
             image: AssetImage("images/Flight Booking-pana 1.png"),
-            fit: BoxFit.cover,
+            fit: BoxFit.fitWidth,
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(28, 57, 0, 0),

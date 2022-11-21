@@ -17,8 +17,8 @@ class _IntroPage2State extends State<IntroPage2> {
       body: Stack(
         children: [
           Image(
-            image: AssetImage("images/Flight Booking-bro 1.png"),
-            fit: BoxFit.cover,
+            image: AssetImage("images/Hotel Booking-cuate.png"),
+            fit: BoxFit.fitWidth,
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(28, 57, 0, 0),

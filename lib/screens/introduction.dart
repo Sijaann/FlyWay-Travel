@@ -3,6 +3,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:tick_tick_travel/common/button.dart';
 import 'package:tick_tick_travel/screens/landingScreens/intro1.dart';
 import 'package:tick_tick_travel/screens/landingScreens/intro2.dart';
+import 'package:tick_tick_travel/screens/landingScreens/intro3.dart';
 import 'package:tick_tick_travel/utils/app_text.dart';
 import 'package:tick_tick_travel/utils/colors.dart';
 import 'package:tick_tick_travel/utils/small_text.dart';
@@ -36,10 +37,7 @@ class _IntroductionState extends State<Introduction> {
             children: [
               IntroPage1(),
               IntroPage2(),
-              Container(
-                color: Colors.deepOrangeAccent,
-                child: Text("3"),
-              ),
+              IntroPage3(),
             ],
           ),
 
@@ -72,7 +70,8 @@ class _IntroductionState extends State<Introduction> {
                     ? CustomButton(
                         btnText: "Done",
                         onTap: () {
-                          Navigator.pushReplacementNamed(context, "/login");
+                          Navigator.pushReplacementNamed(
+                              context, "/signinOption");
                         },
                         hSize: 85.0,
                         vSize: 35.0,

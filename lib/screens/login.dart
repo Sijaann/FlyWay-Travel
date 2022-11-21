@@ -121,7 +121,9 @@ class _LoginState extends State<Login> {
             padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
             child: CustomButton(
               btnText: "Login",
-              onTap: () {},
+              onTap: () {
+                Navigator.pushReplacementNamed(context, "/mainPage");
+              },
               hSize: 350,
               vSize: 44,
               radius: 50.0,
