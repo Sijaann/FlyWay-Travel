@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:tick_tick_travel/screens/introduction.dart';
 import 'package:tick_tick_travel/screens/login.dart';
 
 import 'package:tick_tick_travel/utils/colors.dart';
@@ -15,7 +16,7 @@ class SplashScreen extends StatelessWidget {
           image: AssetImage('images/splash1.png'),
           fit: BoxFit.cover,
         ),
-        nextScreen: Login(),
+        nextScreen: Introduction(),
         splashTransition: SplashTransition.fadeTransition,
         backgroundColor: AppColors.primaryColor);
   }

@@ -3,14 +3,13 @@ import 'package:tick_tick_travel/screens/login.dart';
 import 'package:tick_tick_travel/screens/signup.dart';
 import 'package:tick_tick_travel/screens/splash.dart';
 import 'package:tick_tick_travel/utils/colors.dart';
-import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 void main() {
-  runApp(Tick_Tick_Travel());
+  runApp(TickTickTravel());
 }
 
-class Tick_Tick_Travel extends StatelessWidget {
-  const Tick_Tick_Travel({super.key});
+class TickTickTravel extends StatelessWidget {
+  const TickTickTravel({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +30,7 @@ class Tick_Tick_Travel extends StatelessWidget {
         "/login": (context) => Login(),
         "/signup": (context) => Signup(),
       },
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }
