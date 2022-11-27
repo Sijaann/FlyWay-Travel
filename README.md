@@ -23,6 +23,4 @@ The applocation is yet to be completed.
 5. Signup Screen:
 ![Screenshot_1669181530](https://user-images.githubusercontent.com/97155560/203477539-abbc31ce-d45c-49a7-ab7e-3596e65a6bd6.png)
 
-6. Landing Area:
-![Screenshot_1669181542](https://user-images.githubusercontent.com/97155560/203477689-493b4268-cc50-4b7d-b928-30c5621b659d.png)
 
