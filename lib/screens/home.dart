@@ -14,9 +14,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          child: LargeText(text: "Home Page", textColor: AppColors.textColor),
-        ),
+        child: LargeText(text: "Home Page", textColor: AppColors.textColor),
       ),
     );
   }

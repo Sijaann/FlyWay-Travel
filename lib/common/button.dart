@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tick_tick_travel/utils/colors.dart';
 
 class CustomButton extends StatelessWidget {
   //Button properties
@@ -9,7 +8,8 @@ class CustomButton extends StatelessWidget {
   final double hSize;
   final double vSize;
   final double radius;
-  CustomButton(
+
+  const CustomButton(
       {super.key,
       required this.btnText,
       required this.onTap,

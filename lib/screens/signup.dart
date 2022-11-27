@@ -24,24 +24,24 @@ class _SignupState extends State<Signup> {
           width: MediaQuery.of(context).size.width,
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 50.0,
               ),
 
               //Tick-Tick TEXT
-              LargeText(text: "Tick-Tick", textColor: AppColors.largeTextColor),
+              LargeText(text: "FlyWay", textColor: AppColors.largeTextColor),
 
               //Travel TEXT
               AppText(text: "Travel", textColor: AppColors.largeTextColor),
 
-              SizedBox(
+              const SizedBox(
                 height: 40.0,
               ),
 
               //Signup TEXT
               HeadingText(text: "Signup", textColor: AppColors.primaryColor),
 
-              SizedBox(
+              const SizedBox(
                 height: 40.0,
               ),
 
@@ -54,14 +54,14 @@ class _SignupState extends State<Signup> {
                 radius: 50.0,
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
 
               //OR TEXT
               AppText(text: "OR", textColor: AppColors.textColor),
 
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
 
@@ -72,7 +72,7 @@ class _SignupState extends State<Signup> {
                 radius: 50.0,
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: 23.0,
               ),
 
@@ -83,7 +83,7 @@ class _SignupState extends State<Signup> {
                 radius: 50.0,
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: 23.0,
               ),
 
@@ -99,7 +99,7 @@ class _SignupState extends State<Signup> {
                 radius: 50.0,
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: 23.0,
               ),
 
@@ -115,7 +115,7 @@ class _SignupState extends State<Signup> {
                 radius: 50.0,
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: 23.0,
               ),
 
@@ -128,7 +128,7 @@ class _SignupState extends State<Signup> {
                 radius: 50.0,
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: 23.0,
               ),
 

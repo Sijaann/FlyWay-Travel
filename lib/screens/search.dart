@@ -15,9 +15,7 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          child: LargeText(text: "Search Page", textColor: AppColors.textColor),
-        ),
+        child: LargeText(text: "Search Page", textColor: AppColors.textColor),
       ),
     );
   }

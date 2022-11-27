@@ -15,9 +15,7 @@ class _HotelsPageState extends State<HotelsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          child: LargeText(text: "Hotels Page", textColor: AppColors.textColor),
-        ),
+        child: LargeText(text: "Hotels Page", textColor: AppColors.textColor),
       ),
     );
   }

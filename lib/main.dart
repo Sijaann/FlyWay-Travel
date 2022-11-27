@@ -7,20 +7,20 @@ import 'package:tick_tick_travel/screens/splash.dart';
 import 'package:tick_tick_travel/utils/colors.dart';
 
 void main() {
-  runApp(TickTickTravel());
+  runApp(FlyWayTravel());
 }
 
-class TickTickTravel extends StatelessWidget {
-  const TickTickTravel({super.key});
+class FlyWayTravel extends StatelessWidget {
+  const FlyWayTravel({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Tick-Tick Travel",
+      title: "FlyWay Travel",
       theme: ThemeData(
           scaffoldBackgroundColor: AppColors.backgoundColor,
           appBarTheme: const AppBarTheme(
-            elevation: 0,
+            elevation: 1,
             iconTheme: IconThemeData(
               color: Colors.orange,
             ),

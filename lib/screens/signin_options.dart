@@ -17,7 +17,7 @@ class _SignInOptionState extends State<SignInOption> {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height,
             child: const Image(
               image: AssetImage("images/intro1.jpg"),
@@ -42,7 +42,7 @@ class _SignInOptionState extends State<SignInOption> {
 
                   //Tick-Tick TEXT
                   LargeText(
-                      text: "Tick-Tick", textColor: AppColors.largeTextColor),
+                      text: "FlyWay", textColor: AppColors.largeTextColor),
 
                   //Travel TEXT
                   AppText(text: "Travel", textColor: AppColors.largeTextColor),
@@ -57,7 +57,7 @@ class _SignInOptionState extends State<SignInOption> {
                   AppText(
                       text: "Travel with ease", textColor: AppColors.textColor),
 
-                  SizedBox(
+                  const SizedBox(
                     height: 84.0,
                   ),
 
@@ -68,7 +68,6 @@ class _SignInOptionState extends State<SignInOption> {
                       onPressed: () {
                         Navigator.pushReplacementNamed(context, "/signup");
                       },
-                      child: AppText(text: "Signup", textColor: Colors.white),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.transparent,
                         side: BorderSide(
@@ -76,10 +75,11 @@ class _SignInOptionState extends State<SignInOption> {
                             style: BorderStyle.solid,
                             color: AppColors.primaryColor),
                       ),
+                      child: AppText(text: "Signup", textColor: Colors.white),
                     ),
                   ),
 
-                  SizedBox(
+                  const SizedBox(
                     height: 34.0,
                   ),
 

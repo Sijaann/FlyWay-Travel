@@ -15,10 +15,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          child:
-              LargeText(text: "Profile Page", textColor: AppColors.textColor),
-        ),
+        child: LargeText(text: "Profile Page", textColor: AppColors.textColor),
       ),
     );
   }

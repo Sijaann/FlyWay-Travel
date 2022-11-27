@@ -6,7 +6,6 @@ import 'package:tick_tick_travel/screens/landingScreens/intro2.dart';
 import 'package:tick_tick_travel/screens/landingScreens/intro3.dart';
 import 'package:tick_tick_travel/utils/app_text.dart';
 import 'package:tick_tick_travel/utils/colors.dart';
-import 'package:tick_tick_travel/utils/small_text.dart';
 
 class Introduction extends StatefulWidget {
   const Introduction({super.key});

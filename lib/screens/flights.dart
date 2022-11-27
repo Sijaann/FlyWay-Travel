@@ -15,10 +15,7 @@ class _FlightsPageState extends State<FlightsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          child:
-              LargeText(text: "Flights Page", textColor: AppColors.textColor),
-        ),
+        child: LargeText(text: "Flights Page", textColor: AppColors.textColor),
       ),
     );
   }

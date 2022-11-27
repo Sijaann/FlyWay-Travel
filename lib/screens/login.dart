@@ -39,7 +39,7 @@ class _LoginState extends State<Login> {
 
                   //Tick-Tick Text
                   LargeText(
-                    text: "Tick-Tick",
+                    text: "FlyWay",
                     textColor: AppColors.largeTextColor,
                   ),
 
@@ -73,7 +73,10 @@ class _LoginState extends State<Login> {
             val: false,
             radius: 50.0,
           ),
-          SizedBox(height: 30),
+
+          const SizedBox(
+            height: 30,
+          ),
 
           //Password Textfield
           CustomTextField(
@@ -142,7 +145,7 @@ class _LoginState extends State<Login> {
             ),
           ),
 
-          SizedBox(
+          const SizedBox(
             height: 17.0,
           ),
 

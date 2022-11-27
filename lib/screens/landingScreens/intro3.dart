@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:tick_tick_travel/utils/app_large_text.dart';
 import 'package:tick_tick_travel/utils/app_text.dart';
 import 'package:tick_tick_travel/utils/colors.dart';
-import 'package:tick_tick_travel/utils/heading_text.dart';
 
 class IntroPage3 extends StatefulWidget {
   const IntroPage3({super.key});
@@ -17,8 +15,9 @@ class _IntroPage3State extends State<IntroPage3> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
+        alignment: Alignment.center,
         children: [
-          Image(
+          const Image(
             image: AssetImage("images/Flying around the world-cuate.png"),
             fit: BoxFit.fitWidth,
           ),

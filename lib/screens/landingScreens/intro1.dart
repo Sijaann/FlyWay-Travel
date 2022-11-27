@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tick_tick_travel/utils/app_large_text.dart';
 import 'package:tick_tick_travel/utils/colors.dart';
 import 'package:tick_tick_travel/utils/heading_text.dart';
 
@@ -17,7 +16,7 @@ class _IntroPage1State extends State<IntroPage1> {
     return Scaffold(
       body: Stack(
         children: [
-          Image(
+          const Image(
             image: AssetImage("images/Flight Booking-pana 1.png"),
             fit: BoxFit.fitWidth,
           ),
