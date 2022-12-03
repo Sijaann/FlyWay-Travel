@@ -1,3 +1,6 @@
+IF you want to see the application yourself,
+Type flutter pug get after downloading the code.
+
 # tick_tick_travel
 
 Final Year Project on Hotel and Flight Booking System using Flutter.
