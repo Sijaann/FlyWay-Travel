@@ -66,10 +66,14 @@ class _SignupState extends State<Signup> {
               ),
 
               //First Name TEXTFIELD
-              CustomTextField(
-                hintText: 'First Name',
-                val: false,
-                radius: 50.0,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                child: CustomTextField(
+                  hintText: 'First Name',
+                  enableColor: AppColors.primaryColor,
+                  val: false,
+                  radius: 50.0,
+                ),
               ),
 
               const SizedBox(
@@ -77,10 +81,14 @@ class _SignupState extends State<Signup> {
               ),
 
               //Last Name TEXTFIELD
-              CustomTextField(
-                hintText: 'Last Name',
-                val: false,
-                radius: 50.0,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                child: CustomTextField(
+                  hintText: 'Last Name',
+                  enableColor: AppColors.primaryColor,
+                  val: false,
+                  radius: 50.0,
+                ),
               ),
 
               const SizedBox(
@@ -88,15 +96,19 @@ class _SignupState extends State<Signup> {
               ),
 
               //Email TEXTFIELD
-              CustomTextField(
-                hintText: 'Email',
-                leadingIcon: Icon(
-                  Icons.person_outline,
-                  color: AppColors.hintTextColor,
-                  size: 26,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                child: CustomTextField(
+                  hintText: 'Email',
+                  enableColor: AppColors.primaryColor,
+                  leadingIcon: Icon(
+                    Icons.person_outline,
+                    color: AppColors.hintTextColor,
+                    size: 26,
+                  ),
+                  val: false,
+                  radius: 50.0,
                 ),
-                val: false,
-                radius: 50.0,
               ),
 
               const SizedBox(
@@ -104,15 +116,19 @@ class _SignupState extends State<Signup> {
               ),
 
               //Pasword TEXTFIELD
-              CustomTextField(
-                hintText: 'Password',
-                leadingIcon: Icon(
-                  Icons.lock_outline,
-                  color: AppColors.hintTextColor,
-                  size: 26,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                child: CustomTextField(
+                  hintText: 'Password',
+                  enableColor: AppColors.primaryColor,
+                  leadingIcon: Icon(
+                    Icons.lock_outline,
+                    color: AppColors.hintTextColor,
+                    size: 26,
+                  ),
+                  val: true,
+                  radius: 50.0,
                 ),
-                val: true,
-                radius: 50.0,
               ),
 
               const SizedBox(

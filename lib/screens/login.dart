@@ -63,15 +63,19 @@ class _LoginState extends State<Login> {
           ),
 
           //Email TextField
-          CustomTextField(
-            hintText: 'Email',
-            leadingIcon: Icon(
-              Icons.person_outline,
-              color: AppColors.hintTextColor,
-              size: 26,
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+            child: CustomTextField(
+              hintText: 'Email',
+              enableColor: AppColors.primaryColor,
+              leadingIcon: Icon(
+                Icons.person_outline,
+                color: AppColors.hintTextColor,
+                size: 26,
+              ),
+              val: false,
+              radius: 50.0,
             ),
-            val: false,
-            radius: 50.0,
           ),
 
           const SizedBox(
@@ -79,15 +83,19 @@ class _LoginState extends State<Login> {
           ),
 
           //Password Textfield
-          CustomTextField(
-            hintText: 'Password',
-            leadingIcon: Icon(
-              Icons.lock_outline,
-              color: AppColors.hintTextColor,
-              size: 26,
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+            child: CustomTextField(
+              hintText: 'Password',
+              enableColor: AppColors.primaryColor,
+              leadingIcon: Icon(
+                Icons.lock_outline,
+                color: AppColors.hintTextColor,
+                size: 26,
+              ),
+              val: true,
+              radius: 50.0,
             ),
-            val: true,
-            radius: 50.0,
           ),
 
           //ForgotPassword? TEXTBUTTON

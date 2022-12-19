@@ -9,7 +9,7 @@ class AppTextSmall extends StatelessWidget {
 
   AppTextSmall({
     super.key,
-    this.size = 18,
+    this.size = 15,
     required this.text,
     required this.textColor,
   });

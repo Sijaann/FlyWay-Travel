@@ -69,6 +69,7 @@ class _SignInOptionState extends State<SignInOption> {
                         Navigator.pushReplacementNamed(context, "/signup");
                       },
                       style: ElevatedButton.styleFrom(
+                        elevation: 0,
                         backgroundColor: Colors.transparent,
                         side: BorderSide(
                             width: 3.0,

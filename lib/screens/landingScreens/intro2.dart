@@ -15,7 +15,6 @@ class _IntroPage2State extends State<IntroPage2> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        alignment: Alignment.center,
         children: [
           const Image(
             image: AssetImage("images/Hotel Booking-cuate.png"),

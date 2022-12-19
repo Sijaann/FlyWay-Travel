@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tick_tick_travel/screens/home.dart';
 import 'package:tick_tick_travel/screens/login.dart';
 import 'package:tick_tick_travel/screens/main_page.dart';
 import 'package:tick_tick_travel/screens/signin_options.dart';
@@ -22,7 +23,7 @@ class FlyWayTravel extends StatelessWidget {
           appBarTheme: const AppBarTheme(
             elevation: 1,
             iconTheme: IconThemeData(
-              color: Colors.orange,
+              color: Colors.white,
             ),
           ),
           colorScheme: ColorScheme.light(
@@ -34,7 +35,7 @@ class FlyWayTravel extends StatelessWidget {
         "/signup": (context) => Signup(),
         "/mainPage": (context) => MainPage(),
       },
-      home: const SplashScreen(),
+      home: const MainPage(),
     );
   }
 }
