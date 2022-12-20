@@ -17,9 +17,11 @@ class _IntroPage3State extends State<IntroPage3> {
       body: Stack(
         alignment: Alignment.center,
         children: [
-          const Image(
-            image: AssetImage("images/Flying around the world-cuate.png"),
-            fit: BoxFit.fitWidth,
+          Center(
+            child: const Image(
+              image: AssetImage("images/Flying around the world-cuate.png"),
+              fit: BoxFit.fitWidth,
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 57),

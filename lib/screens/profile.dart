@@ -30,20 +30,16 @@ class _ProfilePageState extends State<ProfilePage> {
           children: [
             //BACK ARROW
             Positioned(
-              child: Container(
-                child: Positioned(
-                  top: 25,
-                  left: 21,
-                  child: IconButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    icon: Icon(
-                      Icons.arrow_back,
-                      size: 24,
-                      color: AppColors.backgoundColor,
-                    ),
-                  ),
+              top: 25,
+              left: 21,
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(
+                  Icons.arrow_back,
+                  size: 24,
+                  color: AppColors.backgoundColor,
                 ),
               ),
             ),
@@ -89,19 +85,22 @@ class _ProfilePageState extends State<ProfilePage> {
             //SCROLLABLE VIEW
             Positioned(
               top: 299,
-              child: SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
-                child: Container(
-                  padding: const EdgeInsets.fromLTRB(22, 31, 22, 0),
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height,
-                  decoration: BoxDecoration(
-                    color: AppColors.backgoundColor,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(25),
-                      topRight: Radius.circular(25),
-                    ),
+              left: 0,
+              right: 0,
+              bottom: 0,
+              child: Container(
+                padding: const EdgeInsets.fromLTRB(22, 31, 22, 0),
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                decoration: BoxDecoration(
+                  color: AppColors.backgoundColor,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(25),
+                    topRight: Radius.circular(25),
                   ),
+                ),
+                child: SingleChildScrollView(
+                  physics: BouncingScrollPhysics(),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -208,15 +207,103 @@ class _ProfilePageState extends State<ProfilePage> {
                           textColor: AppColors.primaryColor),
 
                       SizedBox(
-                        height: 9,
+                        height: 15,
                       ),
 
-                      ProfileTextField(
-                        hintText: "Theme",
-                        leadingIcon: Icon(
-                          Icons.blur_circular_outlined,
-                          size: 24,
-                          color: AppColors.hintTextColor,
+                      //THEME CONTAINER
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border(
+                            bottom: BorderSide(
+                                width: 1.5, color: AppColors.hintTextColor),
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 10),
+                          child: Row(
+                            children: [
+                              //THEME ICON
+                              Icon(
+                                Icons.color_lens_outlined,
+                                size: 24,
+                                color: AppColors.hintTextColor,
+                              ),
+
+                              SizedBox(
+                                width: 21,
+                              ),
+
+                              //THEME TEXT
+                              AppTextSmall(
+                                text: "Theme",
+                                textColor: AppColors.textColor,
+                              ),
+
+                              //SWITCH BUTTON
+                              // Switch(
+                              //     value: switchVal,
+                              //     onChanged: (newValue) {
+                              //       setState(() {
+                              //         switchVal = newValue;
+                              //       });
+                              //     }),
+                            ],
+                          ),
+                        ),
+                      ),
+
+                      SizedBox(
+                        height: 21,
+                      ),
+
+                      //BOOKING/TICKETS TEXT
+                      AppText(
+                        text: "Bookings/Tickets",
+                        textColor: AppColors.primaryColor,
+                      ),
+
+                      SizedBox(
+                        height: 15,
+                      ),
+
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border(
+                            bottom: BorderSide(
+                                width: 1.5, color: AppColors.hintTextColor),
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 10),
+                          child: Row(
+                            children: [
+                              //THEME ICON
+                              Icon(
+                                Icons.bookmark_added_outlined,
+                                size: 24,
+                                color: AppColors.hintTextColor,
+                              ),
+
+                              SizedBox(
+                                width: 21,
+                              ),
+
+                              //THEME TEXT
+                              AppTextSmall(
+                                text: "Bookings",
+                                textColor: AppColors.textColor,
+                              ),
+
+                              //SWITCH BUTTON
+                              // Switch(
+                              //     value: switchVal,
+                              //     onChanged: (newValue) {
+                              //       setState(() {
+                              //         switchVal = newValue;
+                              //       });
+                              //     }),
+                            ],
+                          ),
                         ),
                       ),
                     ],

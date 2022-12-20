@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tick_tick_travel/screens/home.dart';
 import 'package:tick_tick_travel/screens/login.dart';
 import 'package:tick_tick_travel/screens/main_page.dart';
+import 'package:tick_tick_travel/screens/profile.dart';
 import 'package:tick_tick_travel/screens/signin_options.dart';
 import 'package:tick_tick_travel/screens/signup.dart';
 import 'package:tick_tick_travel/screens/splash.dart';
@@ -35,7 +36,7 @@ class FlyWayTravel extends StatelessWidget {
         "/signup": (context) => Signup(),
         "/mainPage": (context) => MainPage(),
       },
-      home: const MainPage(),
+      home: ProfilePage(),
     );
   }
 }
