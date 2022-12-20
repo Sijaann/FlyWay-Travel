@@ -16,7 +16,9 @@ class ProfileTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      enabled: false,
+      //enabled: false,
+      focusNode: AlwaysDisableFocousNode(),
+      //readOnly: true,
       decoration: InputDecoration(
         prefixIcon: leadingIcon,
         suffixIcon: trailingIcon,
@@ -28,4 +30,9 @@ class ProfileTextField extends StatelessWidget {
       ),
     );
   }
+}
+
+class AlwaysDisableFocousNode extends FocusNode {
+  @override
+  bool get hasFocus => false;
 }

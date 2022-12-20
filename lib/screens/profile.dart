@@ -13,12 +13,27 @@ class ProfilePage extends StatefulWidget {
   State<ProfilePage> createState() => _ProfilePageState();
 }
 
-String username = "Sijan Lohani";
-String email = "sijanlohani10@gmail.com";
-String location = "Nepal";
-String contact = "9806632347";
-
 class _ProfilePageState extends State<ProfilePage> {
+  String username = "Sijan Lohani";
+  String email = "sijanlohani10@gmail.com";
+  String location = "Nepal";
+  String contact = "9806632347";
+
+  final usernameController = TextEditingController();
+  final emailController = TextEditingController();
+  final locationController = TextEditingController();
+  final contactController = TextEditingController();
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    usernameController.dispose();
+    emailController.dispose();
+    locationController.dispose();
+    contactController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -123,7 +138,78 @@ class _ProfilePageState extends State<ProfilePage> {
                           color: AppColors.hintTextColor,
                         ),
                         trailingIcon: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            //ALERT DIALOG to change USER'S NAME
+                            showDialog<String>(
+                              context: context,
+                              builder: (BuildContext context) => AlertDialog(
+                                title: const Text('Change your name'),
+                                content: TextField(
+                                  controller: usernameController,
+                                  style: TextStyle(color: AppColors.textColor),
+                                  cursorColor: AppColors.primaryColor,
+                                  decoration: InputDecoration(
+                                    hintText: "Name",
+                                    hintStyle: GoogleFonts.redRose(
+                                      fontSize: 15,
+                                      color: AppColors.hintTextColor,
+                                    ),
+                                  ),
+                                ),
+                                actions: <Widget>[
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    child: const Text('Cancel'),
+                                  ),
+
+                                  //CHANGING USERNAME
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+
+                                      if (usernameController.text == username) {
+                                        final snackBar = SnackBar(
+                                          backgroundColor:
+                                              AppColors.primaryColor,
+                                          content: AppTextSmall(
+                                            text:
+                                                "Username can not be the same as previous",
+                                            textColor: AppColors.backgoundColor,
+                                          ),
+                                        );
+
+                                        // Find the ScaffoldMessenger in the widget tree
+                                        // and use it to show a SnackBar.
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(snackBar);
+                                      } else {
+                                        setState(() {
+                                          username = "$usernameController.text";
+                                        });
+
+                                        final snackBar = SnackBar(
+                                          backgroundColor:
+                                              AppColors.primaryColor,
+                                          content: AppTextSmall(
+                                            text: "User\'s name changed",
+                                            textColor: AppColors.backgoundColor,
+                                          ),
+                                        );
+
+                                        // Find the ScaffoldMessenger in the widget tree
+                                        // and use it to show a SnackBar.
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(snackBar);
+                                      }
+                                    },
+                                    child: const Text('OK'),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
                           icon: Icon(
                             Icons.edit_outlined,
                             size: 24,
@@ -145,7 +231,77 @@ class _ProfilePageState extends State<ProfilePage> {
                           color: AppColors.hintTextColor,
                         ),
                         trailingIcon: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            showDialog<String>(
+                              context: context,
+                              builder: (BuildContext context) => AlertDialog(
+                                title: const Text('Change your Email'),
+                                content: TextField(
+                                  controller: emailController,
+                                  style: TextStyle(color: AppColors.textColor),
+                                  cursorColor: AppColors.primaryColor,
+                                  decoration: InputDecoration(
+                                    hintText: "Email",
+                                    hintStyle: GoogleFonts.redRose(
+                                      fontSize: 15,
+                                      color: AppColors.hintTextColor,
+                                    ),
+                                  ),
+                                ),
+                                actions: <Widget>[
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context, 'Cancel');
+                                    },
+                                    child: const Text('Cancel'),
+                                  ),
+
+                                  //CHANGING USERNAME
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context, 'OK');
+
+                                      if (emailController.text == email) {
+                                        final snackBar = SnackBar(
+                                          backgroundColor:
+                                              AppColors.primaryColor,
+                                          content: AppTextSmall(
+                                            text:
+                                                "Email can not be the same as previous",
+                                            textColor: AppColors.backgoundColor,
+                                          ),
+                                        );
+
+                                        // Find the ScaffoldMessenger in the widget tree
+                                        // and use it to show a SnackBar.
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(snackBar);
+                                      } else {
+                                        setState(() {
+                                          email = "$emailController.text";
+                                        });
+
+                                        final snackBar = SnackBar(
+                                          backgroundColor:
+                                              AppColors.primaryColor,
+                                          content: AppTextSmall(
+                                            text: "Email changed",
+                                            textColor: AppColors.backgoundColor,
+                                          ),
+                                        );
+
+                                        // Find the ScaffoldMessenger in the widget tree
+                                        // and use it to show a SnackBar.
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(snackBar);
+                                      }
+                                    },
+                                    child: const Text('OK'),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
                           icon: Icon(
                             Icons.edit_outlined,
                             size: 24,
@@ -167,7 +323,77 @@ class _ProfilePageState extends State<ProfilePage> {
                           color: AppColors.hintTextColor,
                         ),
                         trailingIcon: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            showDialog<String>(
+                              context: context,
+                              builder: (BuildContext context) => AlertDialog(
+                                title: const Text('Change your Location'),
+                                content: TextField(
+                                  controller: locationController,
+                                  style: TextStyle(color: AppColors.textColor),
+                                  cursorColor: AppColors.primaryColor,
+                                  decoration: InputDecoration(
+                                    hintText: "Location",
+                                    hintStyle: GoogleFonts.redRose(
+                                      fontSize: 15,
+                                      color: AppColors.hintTextColor,
+                                    ),
+                                  ),
+                                ),
+                                actions: <Widget>[
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context, 'Cancel');
+                                    },
+                                    child: const Text('Cancel'),
+                                  ),
+
+                                  //CHANGING USERNAME
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context, 'OK');
+
+                                      if (locationController.text == location) {
+                                        final snackBar = SnackBar(
+                                          backgroundColor:
+                                              AppColors.primaryColor,
+                                          content: AppTextSmall(
+                                            text:
+                                                "Location can not be the same as previous",
+                                            textColor: AppColors.backgoundColor,
+                                          ),
+                                        );
+
+                                        // Find the ScaffoldMessenger in the widget tree
+                                        // and use it to show a SnackBar.
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(snackBar);
+                                      } else {
+                                        setState(() {
+                                          location = "$locationController.text";
+                                        });
+
+                                        final snackBar = SnackBar(
+                                          backgroundColor:
+                                              AppColors.primaryColor,
+                                          content: AppTextSmall(
+                                            text: "Location changed",
+                                            textColor: AppColors.backgoundColor,
+                                          ),
+                                        );
+
+                                        // Find the ScaffoldMessenger in the widget tree
+                                        // and use it to show a SnackBar.
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(snackBar);
+                                      }
+                                    },
+                                    child: const Text('OK'),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
                           icon: Icon(
                             Icons.edit_outlined,
                             size: 24,
@@ -194,7 +420,77 @@ class _ProfilePageState extends State<ProfilePage> {
                             size: 24,
                             color: AppColors.hintTextColor,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            showDialog<String>(
+                              context: context,
+                              builder: (BuildContext context) => AlertDialog(
+                                title: const Text('Change your Contact Number'),
+                                content: TextField(
+                                  controller: contactController,
+                                  style: TextStyle(color: AppColors.textColor),
+                                  cursorColor: AppColors.primaryColor,
+                                  decoration: InputDecoration(
+                                    hintText: "Contact Number",
+                                    hintStyle: GoogleFonts.redRose(
+                                      fontSize: 15,
+                                      color: AppColors.hintTextColor,
+                                    ),
+                                  ),
+                                ),
+                                actions: <Widget>[
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context, 'Cancel');
+                                    },
+                                    child: const Text('Cancel'),
+                                  ),
+
+                                  //CHANGING USERNAME
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context, 'OK');
+
+                                      if (contactController.text == contact) {
+                                        final snackBar = SnackBar(
+                                          backgroundColor:
+                                              AppColors.primaryColor,
+                                          content: AppTextSmall(
+                                            text:
+                                                "Contact can not be the same as previous",
+                                            textColor: AppColors.backgoundColor,
+                                          ),
+                                        );
+
+                                        // Find the ScaffoldMessenger in the widget tree
+                                        // and use it to show a SnackBar.
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(snackBar);
+                                      } else {
+                                        setState(() {
+                                          contact = "$contactController.text";
+                                        });
+
+                                        final snackBar = SnackBar(
+                                          backgroundColor:
+                                              AppColors.primaryColor,
+                                          content: AppTextSmall(
+                                            text: "Contact changed",
+                                            textColor: AppColors.backgoundColor,
+                                          ),
+                                        );
+
+                                        // Find the ScaffoldMessenger in the widget tree
+                                        // and use it to show a SnackBar.
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(snackBar);
+                                      }
+                                    },
+                                    child: const Text('OK'),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
                         ),
                       ),
 
@@ -219,7 +515,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.only(bottom: 10),
+                          padding: const EdgeInsets.only(bottom: 10, left: 10),
                           child: Row(
                             children: [
                               //THEME ICON
@@ -230,7 +526,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               ),
 
                               SizedBox(
-                                width: 21,
+                                width: 10,
                               ),
 
                               //THEME TEXT
@@ -274,7 +570,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.only(bottom: 10),
+                          padding: const EdgeInsets.only(bottom: 10, left: 12),
                           child: Row(
                             children: [
                               //THEME ICON
@@ -285,7 +581,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               ),
 
                               SizedBox(
-                                width: 21,
+                                width: 10,
                               ),
 
                               //THEME TEXT

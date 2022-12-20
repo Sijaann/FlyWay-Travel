@@ -36,7 +36,7 @@ class FlyWayTravel extends StatelessWidget {
         "/signup": (context) => Signup(),
         "/mainPage": (context) => MainPage(),
       },
-      home: ProfilePage(),
+      home: MainPage(),
     );
   }
 }
